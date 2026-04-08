@@ -160,6 +160,9 @@ app.get("/users/:userId", (req, res) => {
   res.json({ ok: true, userId: req.userIdNum });
 });
 
+app.get("/", (req, res) => {
+  res.json({ ok: true,message:"serverUp"});
+});
 
 // Start the server by listening
 app.listen(3000, () => {
